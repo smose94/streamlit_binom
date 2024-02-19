@@ -33,7 +33,7 @@ plot_posterior(p_grid, posterior)
 st.sidebar.header("Additional Information")
 st.sidebar.markdown("""
 
-                    This app demonstrates Bayesian inference using a simple example from Richard McIlreath's 
+                    This app demonstrates Bayesian inference using a simple example from Richard McElreath's 
                     [Statistical Rethinking](https://xcelab.net/rm/statistical-rethinking/).
                     """)
 
