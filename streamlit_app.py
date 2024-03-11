@@ -18,10 +18,14 @@ def plot_posterior(p_grid, posterior):
 st.title("Bayesian Inference with Binomial Likelihood")
 
 # User inputs for number of Water and Land rolls
-st.sidebar.header("User Inputs")
-water_rolls = st.sidebar.number_input("Number of times 'Water' is found:", min_value=0, step=1, value=6)
-land_rolls = st.sidebar.number_input("Number of times 'Land' is found:", min_value=0, step=1, value=3)
+col1, col2 = st.columns(2)  # Creates two columns
+with col1:
+    water_rolls = st.number_input("Number of times 'Water' is found:", min_value=0, step=1, value=6)
 
+with col2:
+    land_rolls = st.number_input("Number of times 'Land' is found:", min_value=0, step=1, value=3)
+
+# 
 # Compute posterior distribution
 grid_points = 40
 p_grid, posterior = posterior_grid_binom(grid_points, water_rolls+land_rolls, water_rolls)
